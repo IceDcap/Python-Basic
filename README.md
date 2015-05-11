@@ -86,9 +86,11 @@ Traceback (most recent call last):
 ```
 None(Python内建值)、空列表([])、初始化
 初始化一个长度为10的列表：
+```Python
 >>> sequence = [None] * 10
 >>> sequence
 [None, None, None, None, None, None, None, None, None, None]
+```
 
 ### 2.1.5 成员资格
 使用in运算符，返回布尔值若该成员在序列中则为True否则False
@@ -119,28 +121,117 @@ True
 ['H', 'e', 'l', 'l', 'o']
 ```
 ### 2.2.2 列表操作
-赋值
-删除元素
-分片赋值
+赋值、删除元素、分片赋值
+```Python
+>>> x = list('hello')
+>>> x
+['h', 'e', 'l', 'l', 'o']
+>>> x[0] = 'br'
+>>> x
+['br', 'e', 'l', 'l', 'o']
+>>> del x[2]
+>>> x
+['br', 'e', 'l', 'o']
+>>> x[1:] = '3'
+>>> x
+['br', '3']
+>>> x[0:] = list('hello')
+>>> x
+['h', 'e', 'l', 'l', 'o']
+>>> x[1:3] = [1,2,3]
+>>> x
+['h', 1, 2, 3, 'l', 'o']
+```
 
 ### 2.2.3 列表方法
 1.append
-
+```Python
+>>> x = [1,2,3]
+>>> x.append([4,5,6])
+>>> x
+[1, 2, 3, [4, 5, 6]]
+>>> x.append('hello')
+>>> x
+[1, 2, 3, [4, 5, 6], 'hello']
+```
 2.count
+```Python
+>>> y = ['ee', 'a', 'be', 'c', 'be']
+>>> y.count('be')
+2
+```
 
 3.extend
+```Python
+>>> x.extend(y)
+>>> x
+[1, 2, 3, [4, 5, 6], 'hello', 'ee', 'a', 'be', 'c', 'be']
+```
 
 4.index
+```Python
+>>> x
+[1, 2, 3, [4, 5, 6], 'hello', 'ee', 'a', 'be', 'c', 'be']
+>>> x.index('ee')
+5
+```
 
 5.insert
+```Python
+>>> x.insert(5, 'world')
+>>> x
+[1, 2, 3, [4, 5, 6], 'hello', 'world', 'ee', 'a', 'be', 'c', 'be']
+```
 
 6.pop
+```Python
+>>> x
+[1, 2, 3, [4, 5, 6], 'hello', 'world', 'ee', 'a', 'be', 'c', 'be']
+>>> x.pop()
+'be'
+>>> x
+[1, 2, 3, [4, 5, 6], 'hello', 'world', 'ee', 'a', 'be', 'c']
+>>> x.pop(0)
+1
+>>> x
+[2, 3, [4, 5, 6], 'hello', 'world', 'ee', 'a', 'be', 'c']
+>>> x.pop(2)
+[4, 5, 6]
+>>> x
+[2, 3, 'hello', 'world', 'ee', 'a', 'be', 'c']
+```
 
 7.remove
+```Python
+>>> x
+[2, 3, 'hello', 'world', 'ee', 'a', 'be', 'c']
+>>> x.remove(2)
+>>> x
+[3, 'hello', 'world', 'ee', 'a', 'be', 'c']
+>>> x.remove('22')
+Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+    ValueError: list.remove(x): x not in list
+>>> x.remove('ee')
+>>> x
+[3, 'hello', 'world', 'a', 'be', 'c']
+```
 
 8.reverse
+```Python
+>>> x
+[3, 'hello', 'world', 'a', 'be', 'c']
+>>> x.reverse()
+>>> x
+['c', 'be', 'a', 'world', 'hello', 3]
+```
 
 9.sort
+```Python
+>>> x.sort()
+>>> x
+[3, 'a', 'be', 'c', 'hello', 'world']
+```
 
 10.高级排序
 
