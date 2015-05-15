@@ -31,6 +31,7 @@ Python中re模块包含对正则表达式的支持
 一些重要的函数
 
 函数 | 描述
+-----|-----
 compile(pattern[, flags]) | 根据包含正则表达式的字符串创建模式对象
 search(pattern, string[, flags]) | 在字符串中寻找模式
 match(pattern, string[, flags]) | 在字符串开始处匹配模式
@@ -100,6 +101,7 @@ Found it
 模式 诸如r'www\.(.+)\.com$'
 
 方法 | 描述
+-----|-----
 group([group1, ...]) | 获取给定子模式（组）的匹配项
 start([group]) | 返回给定组的匹配项的开始位置
 end([group]) | 返回给定组的匹配项的结束位置（和分片一样，不包括组的结束位置）
