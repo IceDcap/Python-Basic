@@ -1,6 +1,8 @@
 # 2.列表和元组
 Python中最基本的数据结构是序列（sequence），序列中的每个元素被分配一个序号，即元素的位置，也称为索引，第一个索引是0，之后以此类推。
 
+补充：序列类型支持成员关系操作符（in）、大小计算（len（））、分片（[]）并且是可迭代的。Python提供了五中内置的序列类型：bytearray、bytes、list、str和tuple，本文介绍的时list列表和tuple元组。
+
 ```Python
 >>> x = ['Edward Gumby', 42, True, 'hello', ['hello', 4, 'world']]
 >>> x

@@ -21,6 +21,8 @@ Python八大要素
 
 [5.面向对象和异常处理](https://github.com/IceDcap/Python-Basic/tree/master/5)
 
+[6.魔法方法、属性和迭代器](https://github.com/IceDcap/Python-Basic/tree/master/6)
+
 [正则表达式](https://github.com/IceDcap/Python-Basic/tree/master/regexes)
 
 
